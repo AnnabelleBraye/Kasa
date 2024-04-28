@@ -1,0 +1,10 @@
+a {
+  color: black;
+  text-decoration-style: none;
+  font-size: $error-link-ts-mobile;
+  font-weight: $error-link-tw-mobile;
+  @media (min-width: 376px) {
+    font-size: $error-link-ts-desktop;
+    font-weight: $error-link-tw-desktop;
+  }
+}
