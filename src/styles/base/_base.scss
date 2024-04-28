@@ -1,10 +1,11 @@
-a {
-  color: black;
-  text-decoration-style: none;
-  font-size: $error-link-ts-mobile;
-  font-weight: $error-link-tw-mobile;
-  @media (min-width: 376px) {
-    font-size: $error-link-ts-desktop;
-    font-weight: $error-link-tw-desktop;
+* {
+  font-family: 'Montserrat';
+}
+
+body {
+  margin: 20px;
+  @include breakpoint(large) {
+    margin: auto;
+    margin-top: 45px;
   }
 }

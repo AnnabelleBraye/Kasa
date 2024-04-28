@@ -1,6 +1,6 @@
 const Error = () => {
   return (
-    <div></div>
+    <div>Error</div>
   )
 }
 

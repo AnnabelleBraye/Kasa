@@ -1,3 +1,42 @@
 header {
-  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 47px;
+  margin-bottom: 27px;
+  @include breakpoint(large) {
+    height: 68px;
+    margin-bottom: 50px;
+  }
+}
+
+.logo-img {
+  background-image: url('./src/assets/images/kasa_logo_mobile.png');
+  width: 145px;
+  height: 100%;
+  @include breakpoint(large) {
+    background-image: url('./src/assets/images/kasa_logo.png');
+    width: 210px;
+  }
+}
+
+nav {
+  display: flex;
+  gap: 26px;
+}
+
+.navButton {
+  color: black;
+  text-decoration: none;
+  align-items: right;
+  font-size: $header-footer-ts-mobile;
+  font-weight: $header-footer-tw-mobile;
+  @include breakpoint(large) {
+    font-size: $header-footer-ts-desktop;
+    font-weight: $header-footer-tw-desktop;
+  }
+}
+
+.selected {
+  text-decoration: underline;
 }
