@@ -7,6 +7,7 @@ import About from './pages/About'
 import Rental from './pages/Rental'
 import Error from './pages/Error'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -19,5 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='*' element={<Error />}></Route>
       </Routes>
     </Router>
+    <Footer />
   </React.StrictMode>,
 )
