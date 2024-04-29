@@ -5,7 +5,7 @@ header {
   height: 47px;
   margin: 20px;
   margin-bottom: 27px;
-  @include breakpoint(large) {
+  @include breakpoint(small) {
     height: 68px;
     margin: 100px;
     margin-top: 45px;
@@ -15,7 +15,7 @@ header {
   img {
     width: 145px;
     height: 100%;
-    @include breakpoint(large) {
+    @include breakpoint(small) {
       width: 210px;
     }
   }
@@ -32,7 +32,7 @@ nav {
   align-items: right;
   font-size: $header-footer-fs-mobile;
   font-weight: $header-footer-fw-mobile;
-  @include breakpoint(large) {
+  @include breakpoint(small) {
     font-size: $header-footer-fs-desktop;
     font-weight: $header-footer-fw-desktop;
   }
