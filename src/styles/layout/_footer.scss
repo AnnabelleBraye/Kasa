@@ -16,7 +16,7 @@ footer {
     text-align: center;
     font-size: $header-footer-fs-mobile;
     font-weight: $header-footer-fw-mobile;
-    @include breakpoint(large) {
+    @include breakpoint(small) {
       width: auto;
       margin-top: 28px;
       font-size: $header-footer-fs-desktop;

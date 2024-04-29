@@ -1,0 +1,112 @@
+.container {
+  margin: 20px;
+  margin-top: 27px;
+  margin-bottom: 22px;
+  @include breakpoint(small) {
+    margin: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .title-container {
+    position:relative;
+    display: flex;
+    align-items: center;
+    background-image: url('./src/assets/images/home_bg_full.png');
+    background-position: 32% 57%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 111px;
+    border-radius: 10px;
+    @include breakpoint(small) {
+      background-position: 32% 50%;
+      height: 223px;
+      justify-content: center;
+      border-radius: 25px;
+    }
+    @include breakpoint(medium) {
+      background-size: cover;
+    }
+    .main-title {
+      position: absolute;
+      color: white;
+      margin-left: 16px;
+      font-size: $home-title-fs-mobile;
+      font-weight: $home-title-fw-mobile;
+      @include breakpoint(small) {
+        font-size: $home-title-fs-desktop;
+        font-weight: $home-title-fw-desktop;
+      };
+      &__mobile {
+        display: block;
+        @include breakpoint(small) {
+          display: none;
+        }
+      }
+      &__desktop {
+        display: none;
+        @include breakpoint(small) {
+          display: block;
+        }
+      }
+    }
+  }
+  .title-container::before {
+    content: '';
+    width: 100%;
+    height: 111px;
+    border-radius: 10px;
+    position:absolute;
+    background-color: #000;
+    opacity: 0.5;
+    @include breakpoint(small) {
+      height: 223px;
+      border-radius: 25px;
+    }
+  }
+}
+
+.rental-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background-color: transparent;
+  border-radius: 25px;
+  margin-top: 22px;
+  margin-bottom: 27px;
+
+  @include breakpoint(small) {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 60px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    margin-top: 43px;
+    margin-bottom: 50px;
+    padding: 50px;
+    padding-top: 56px;
+    padding-bottom: 43px;
+  }
+
+  .rental-card {
+    position: relative;
+    img {
+      height: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .rental-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: white;
+      margin: 20px;
+      margin-bottom: 15px;
+      font-size: $home-card-title-ts;
+      font-weight: $home-card-title-tw;
+      @include breakpoint(small) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
