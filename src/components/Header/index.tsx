@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="logo-img"></div>
+      <img src='./src/assets/svg/logo_header.svg' alt="Logo Header" />
       <nav>
         <Link to='/' className={classes('/')}>Accueil</Link>
         <Link to='/about' className={classes('/about')}>A propos</Link>
