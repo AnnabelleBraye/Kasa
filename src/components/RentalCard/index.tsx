@@ -1,9 +1,17 @@
-const RentalCard = () => {
+type RentalInfos = {
+  cover: string,
+  title: string
+}
+
+const RentalCard = ({
+  cover,
+  title
+}: RentalInfos) => {
   return (
     <article className="rental-card">
-      <img src="./src/assets/images/about_image_full.png" alt="Rental picture" />
+      <img src={cover} alt="Rental picture" />
 
-      <h2 className="rental-title">Titre de la location</h2>
+      <h2 className="rental-title">{title}</h2>
     </article>
   )
 }
