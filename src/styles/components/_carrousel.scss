@@ -1,0 +1,66 @@
+.carrousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 255px;
+
+  @include breakpoint(small) {
+    height: 415px;
+  }
+
+  .buttons-container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-arrow {
+      position: relative;
+      height: 24px;
+      width: 24px;
+
+      @include breakpoint(small) {
+        height: 96px;
+        width: 119px;
+      }
+    }
+  
+    .right-arrow {
+      position: relative;
+      height: 24px;
+      width: 24px;
+
+      @include breakpoint(small) {
+        height: 96px;
+        width: 119px;
+      }
+    }
+  }
+
+  .picture {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: 30% 45%;
+    background-repeat: no-repeat;
+
+    @include breakpoint(small) {
+      border-radius: 25px;
+    }
+  }
+
+  .image-count {
+    display: none;
+    @include breakpoint(small) {
+      display: block;
+      position: absolute;
+      bottom: 25px;
+      color: white;
+      font-size: $housing-text-fs-desktop;
+      font-weight: $housing-text-fw-desktop;
+    }
+  }
+}
