@@ -1,0 +1,33 @@
+.collapse-container {  
+  border-radius: 5px;
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary-color;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: $collapse-title-fs-mobile;
+    font-weight: $collapse-title-fw-mobile;
+    
+    .icon {
+      width: 16px;
+      height: 16px;
+      font-size: $collapse-title-fs-desktop;
+      font-weight: $collapse-title-fw-desktop;
+    }
+  }
+
+  .data-container {
+    background-color: $secondary-color;
+    font-size: $collapse-text-fs-mobile;
+    font-weight: $collapse-text-fw-mobile;
+    padding: 20px;
+
+    @include breakpoint(small) {
+      font-size: $collapse-text-fs-desktop;
+      font-weight: $collapse-text-fw-desktop;
+    }
+  }
+}
