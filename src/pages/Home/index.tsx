@@ -1,8 +1,8 @@
 import Loader from "../../components/Loader";
 import RentalCard from "../../components/RentalCard";
-import { useFetch } from "../../utils/hooks";
+import { useFetch } from "../../utils/hooks/index.tsx";
 
-type Rental = {
+export type RentalType = {
   id: string,
   title: string,
   cover: string,
@@ -19,13 +19,13 @@ type Rental = {
 }
 
 const Home = () => {
-  const {data, isLoading}: {data: Rental[], isLoading: boolean} = useFetch('./src/data/rentals.json')
+  const {data, isLoading}: {data: RentalType[], isLoading: boolean} = useFetch('/src/data/rentals.json')
 
   const rentalsList = data.map((rental) => (
-    <RentalCard key={rental.id} cover={rental.cover} title={rental.title} />
+    <RentalCard key={rental.id} id={rental.id} cover={rental.cover} title={rental.title} />
   ))
 
-  let rentalContainerClasses = 'rental-container';
+  let rentalContainerClasses = 'rentals-container';
   isLoading ? rentalContainerClasses += ' flex' : rentalContainerClasses;
 
   return (
