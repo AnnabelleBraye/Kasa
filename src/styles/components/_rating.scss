@@ -1,0 +1,18 @@
+.stars-container {
+  display: flex;
+  gap: 2px;
+
+  @include breakpoint(small) {
+    gap: 4px;
+  }
+
+  .star {
+    width: 13px;
+    height: 13px;
+
+    @include breakpoint(small) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
