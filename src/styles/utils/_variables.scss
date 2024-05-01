@@ -9,13 +9,20 @@ $breakpoints: (
 // Global variables
 $font-family: Montserrat;
 $primary-color: #FF6060;
+$secondary-color: #F6F6F673;
 $home-card-title-ts: 18px;
 $home-card-title-tw: 700;
-$collapse-fs-desktop: 18px;
-$collapse-fw-desktop: 700;
+
+// Collapse Desktop
+$collapse-title-fs-desktop: 18px;
+$collapse-title-fw-desktop: 700;
+$collapse-text-fs-desktop: 18px;
+$collapse-text-fw-desktop: 400;
+// Collapse Mobile
 $collapse-title-fs-mobile: 13px;
 $collapse-title-fw-mobile: 700;
-
+$collapse-text-fs-mobile: 12px;
+$collapse-text-fw-mobile: 400;
 
 // Header/Footer Desktop
 $header-footer-fs-desktop: 24px;

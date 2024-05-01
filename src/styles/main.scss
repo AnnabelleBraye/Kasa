@@ -3,6 +3,7 @@
 /// Abstracts
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/utils.scss";
 
 /// Base
 @import "./base/base";
@@ -11,6 +12,10 @@
 
 /// Components
 @import "./components/loader";
+@import "./components/carrousel";
+@import "./components/tag";
+@import "./components/rating";
+@import "./components/collapsePanel";
 
 /// Layout
 @import "./layout/header";
@@ -19,3 +24,4 @@
 /// Pages
 @import "./pages/home";
 @import "./pages/about";
+@import "./pages/rental";
