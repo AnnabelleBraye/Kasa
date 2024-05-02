@@ -53,14 +53,11 @@
   }
 
   .image-count {
-    display: none;
-    @include breakpoint(small) {
-      display: block;
-      position: absolute;
-      bottom: 25px;
-      color: white;
-      font-size: $housing-text-fs-desktop;
-      font-weight: $housing-text-fw-desktop;
-    }
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    color: white;
+    font-size: $housing-text-fs-desktop;
+    font-weight: $housing-text-fw-desktop;
   }
 }
