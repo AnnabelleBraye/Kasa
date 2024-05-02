@@ -16,8 +16,8 @@ const CollapsePanel = ({title, data}: CollapseType) => {
   }
 
   return (
-    <div className="collapse-container">
-      <div className="title-container">
+    <div className="collapse">
+      <div className="collapse__title-container">
         <h3>{title}</h3>
         <FontAwesomeIcon
           className='icon' 
@@ -25,7 +25,7 @@ const CollapsePanel = ({title, data}: CollapseType) => {
           onClick={() => handleClickOnIcon()} 
         />
       </div>
-      <div className={`data-container ${!isOpened ? 'hidden' : ''}`}>
+      <div className={`collapse__data-container ${!isOpened ? 'hidden' : ''}`}>
         { Array.isArray(data) ? (
           <ul>
             {data.map((data) => (

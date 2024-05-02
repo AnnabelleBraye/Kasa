@@ -12,6 +12,7 @@
 
 /// Components
 @import "./components/loader";
+@import "./components/backgroundZone";
 @import "./components/carrousel";
 @import "./components/tag";
 @import "./components/rating";
@@ -25,3 +26,4 @@
 @import "./pages/home";
 @import "./pages/about";
 @import "./pages/rental";
+@import "./pages/error";

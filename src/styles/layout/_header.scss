@@ -4,12 +4,13 @@ header {
   align-items: center;
   height: 47px;
   margin: 20px;
-  margin-bottom: 27px;
+  margin-bottom: 0;
+
   @include breakpoint(small) {
     height: 68px;
     margin: 100px;
     margin-top: 45px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 
   img {
