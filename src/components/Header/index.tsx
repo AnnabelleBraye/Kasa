@@ -10,7 +10,9 @@ const Header = () => {
 
   return (
     <header>
-      <img src='./src/assets/svg/logo_header.svg' alt="Logo Header" />
+      <Link to='/'>
+        <img src='/src/assets/svg/logo_header.svg' alt="Logo Header" />
+      </Link>
       <nav>
         <Link to='/' className={classes('/')}>Accueil</Link>
         <Link to='/about' className={classes('/about')}>A propos</Link>
