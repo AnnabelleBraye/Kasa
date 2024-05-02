@@ -1,0 +1,44 @@
+.error-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 113px;
+  margin-bottom: 113px;
+
+  @include breakpoint(small) {
+    margin-top: 139px;
+    margin-bottom: 139px;
+
+  }
+  
+  h1 {
+    color: $primary-color;
+    font-size: $error-title-fs-mobile;
+    font-weight: $error-title-fw-mobile;
+
+    @include breakpoint(small) {
+      font-size: $error-title-fs-desktop;
+      font-weight: $error-title-fw-desktop;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $primary-color;
+    margin-top: 113px;
+
+    @include breakpoint(small) {
+      margin-top: 139px;
+    }
+  }
+
+  &__link {
+    margin-top: 113px;
+    color: black;
+
+    @include breakpoint(small) {
+      margin-top: 139px;
+    }
+  }
+}
