@@ -1,6 +1,6 @@
-.collapse-container {  
+.collapse {  
   border-radius: 5px;
-  .title-container {
+  &__title-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,7 +19,7 @@
     }
   }
 
-  .data-container {
+  &__data-container {
     background-color: $secondary-color;
     font-size: $collapse-text-fs-mobile;
     font-weight: $collapse-text-fw-mobile;
