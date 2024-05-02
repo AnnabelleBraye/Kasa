@@ -1,3 +1,4 @@
+import BackgroundZone from "../../components/BackgroundZone";
 import Loader from "../../components/Loader";
 import RentalCard from "../../components/RentalCard";
 import { useFetch } from "../../utils/hooks/index.tsx";
@@ -28,17 +29,15 @@ const Home = () => {
   let rentalContainerClasses = 'rentals-container';
   isLoading ? rentalContainerClasses += ' flex' : rentalContainerClasses;
 
+
   return (
     <div className="container">
-      <div className="title-container">
-        <h1 className="main-title main-title__mobile">Chez vous,< br /> partout et ailleurs</h1>
-        <h1 className="main-title main-title__desktop">Chez vous, partout et ailleurs</h1>
-      </div>
-        <section className={rentalContainerClasses}>
-          {isLoading ? <Loader /> :
-            rentalsList
-          }
-        </section>
+      <BackgroundZone imgSrc="/src/assets/images/home_bg_full.png" title={`Chez vous, \npartout et ailleurs`} />
+      <section className={rentalContainerClasses}>
+        {isLoading ? <Loader /> :
+          rentalsList
+        }
+      </section>
     </div>
   )
 }

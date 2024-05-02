@@ -5,3 +5,9 @@
 .flex {
   display: flex;
 }
+
+.break-text {
+  @include breakpoint(small) {
+    display: none;
+  }
+}
