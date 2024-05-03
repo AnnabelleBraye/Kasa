@@ -10,7 +10,7 @@
     margin-bottom: 50px;
   }
 
-  section {
+  .rental-informations {
     @include breakpoint(small) {
       display: flex;
       justify-content: space-between;

@@ -27,7 +27,7 @@ const Rental = () => {
     <div className="rental-container">
       <Carrousel pictures={item.pictures} /> 
 
-      <section>
+      <section className="rental-informations">
         <div className="first-container">
           <h1>{item.title}</h1>
           <p>{item.location}</p>
@@ -48,10 +48,10 @@ const Rental = () => {
             </div>
         </div>
       </section>
-      <div className="collapses-container">
+      <section className="collapses-container">
         <CollapsePanel title='Description' data={item.description} />
         <CollapsePanel title='Equipements' data={item.equipments} />
-      </div>
+      </section>
     </div>
   )
 }
