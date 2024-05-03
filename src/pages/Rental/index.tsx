@@ -23,8 +23,6 @@ const Rental = () => {
     return null;
   }
 
-  console.log(Array.isArray(item.equipments))
-
   return (
     <div className="rental-container">
       <Carrousel pictures={item.pictures} /> 
