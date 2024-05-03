@@ -3,7 +3,7 @@ type RatingType = {
 }
 
 const Rating = ({rating}: RatingType) => {
-  const starsSrc = getStars(parseInt(rating));
+  const starsSrc: string[] = getStars(parseInt(rating));
 
   return (
     <div className="stars-container">
@@ -17,7 +17,7 @@ const Rating = ({rating}: RatingType) => {
 
 export default Rating;
 
-const getStars = (rating: number) => {
+const getStars = (rating: number): string[] => {
   const starsSrc: string[] = new Array(5).fill('/src/assets/svg/star.svg');
   if (rating !== 0) {
     starsSrc.fill('/src/assets/svg/star-colored.svg', 0, rating);

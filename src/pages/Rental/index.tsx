@@ -16,7 +16,7 @@ const Rental = () => {
     return <Loader />;
   }
 
-  const item = data.find((item: RentalType) => item.id === id) || null;
+  const item: RentalType | null = data.find((item: RentalType) => item.id === id) || null;
 
   if (!item) {
     navigate('/error')

@@ -6,14 +6,14 @@ type CarrouselType = {
 
 const Carrousel = ({pictures}: CarrouselType) => {
   const [imgIndex, setImgIndex] = useState<number>(0);
-  const totalImages = pictures.length;
-  const isMultipleImage = totalImages > 1;
+  const totalImages: number = pictures.length;
+  const isMultipleImage: boolean = totalImages > 1;
 
-  const onClickOnLeftArrow = () => {
+  const onClickOnLeftArrow = (): void => {
     setImgIndex((prevIndex) => (prevIndex === 0 ? totalImages - 1 : prevIndex - 1));
   };
 
-  const onClickOnRightArrow = () => {
+  const onClickOnRightArrow = (): void => {
     setImgIndex((prevIndex) => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
   };
 

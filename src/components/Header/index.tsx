@@ -1,10 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, Location, useLocation } from "react-router-dom";
 
 const Header = () => {
-  const location = useLocation();
-  const pathname = location.pathname;
+  const location: Location = useLocation();
+  const pathname: string = location.pathname;
 
-  const classes = (location: string) => {
+  const classes = (location: string): string => {
     return `navButton ${pathname === location ? 'selected' : ''}`
   }
 

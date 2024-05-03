@@ -22,11 +22,11 @@ export type RentalType = {
 const Home = () => {
   const {data, isLoading}: {data: RentalType[], isLoading: boolean} = useFetch('/src/data/rentals.json')
 
-  const rentalsList = data.map((rental) => (
+  const rentalsList: JSX.Element[] = data.map((rental) => (
     <RentalCard key={rental.id} id={rental.id} cover={rental.cover} title={rental.title} />
   ))
 
-  let rentalContainerClasses = 'rentals-container';
+  let rentalContainerClasses: string = 'rentals-container';
   isLoading ? rentalContainerClasses += ' flex' : rentalContainerClasses;
 
 

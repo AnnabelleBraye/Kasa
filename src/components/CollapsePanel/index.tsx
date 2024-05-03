@@ -11,7 +11,7 @@ type CollapseType = {
 const CollapsePanel = ({title, data}: CollapseType) => {
   const [isOpened, setOpened] = useState<boolean>(false);
 
-  const handleClickOnIcon = () => {
+  const handleClickOnIcon = (): void => {
     setOpened((isOpened) => !isOpened);
   }
 

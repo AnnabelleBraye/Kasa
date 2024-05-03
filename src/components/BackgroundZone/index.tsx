@@ -7,9 +7,9 @@ type BackgroundZoneType = {
 
 const BackgroundZone = ({imgSrc, title}: BackgroundZoneType) => {
   // Remplace les sauts de ligne (\n) par des balises <br />
-  const getFormattedTitle = (title: string) => {
-    const parts = title.split('\n');
-    const formattedTitle = parts.map((line, index) => (
+  const getFormattedTitle = (title: string): JSX.Element[] => {
+    const parts: string[] = title.split('\n');
+    const formattedTitle: JSX.Element[] = parts.map((line, index) => (
       <Fragment key={index}>
         {line}
         {index !== parts.length - 1 && <br className="break-text" />}
