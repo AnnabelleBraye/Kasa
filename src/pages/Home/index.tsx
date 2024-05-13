@@ -1,6 +1,7 @@
 import BackgroundZone from "../../components/BackgroundZone";
 import Loader from "../../components/Loader";
 import RentalCard from "../../components/RentalCard";
+import { getFormattedTitle } from "../../utils/format/index.tsx";
 import { useFetch } from "../../utils/hooks/index.tsx";
 
 export type RentalType = {
@@ -32,7 +33,9 @@ const Home = () => {
 
   return (
     <div className="container">
-      <BackgroundZone imgSrc="/src/assets/images/home_bg_full.png" title={`Chez vous, \npartout et ailleurs`} />
+      <BackgroundZone imgSrc="/src/assets/images/home_bg_full.png">
+        <h1 className="main-title">{getFormattedTitle(`Chez vous, \npartout et ailleurs`)}</h1>
+      </BackgroundZone>
       <section className={rentalContainerClasses}>
         {isLoading ? <Loader /> :
           rentalsList

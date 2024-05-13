@@ -14,7 +14,9 @@ const RentalCard = ({
   return (
     <Link to={`/rental/${id}`}>
       <article className="rental-card">
-        <img src={cover} alt="Rental picture" />
+        <div className="img">
+          <img src={cover} alt="Rental picture" />
+        </div>
 
         <h2 className="rental-title">{title}</h2>
       </article>

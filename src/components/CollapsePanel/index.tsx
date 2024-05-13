@@ -1,14 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 
 type CollapseType = {
   title: string,
-  data: string | string[]
+  children?: ReactNode
 }
 
-const CollapsePanel = ({title, data}: CollapseType) => {
+const CollapsePanel = ({title, children}: CollapseType) => {
   const [isOpened, setOpened] = useState<boolean>(false);
 
   const handleClickOnIcon = (): void => {
@@ -26,15 +26,7 @@ const CollapsePanel = ({title, data}: CollapseType) => {
         />
       </div>
         <div className={`collapse__data-container ${isOpened ? 'open' : ''}`}>
-          { Array.isArray(data) ? (
-            <ul>
-              {data.map((data) => (
-                <li key={`${data}`}>{data}</li>)
-              )} 
-            </ul>
-          ) :
-          <p>{data}</p>
-        }
+          {children}
         </div>
     </div>
   )
