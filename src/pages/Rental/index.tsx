@@ -49,8 +49,16 @@ const Rental = () => {
         </div>
       </section>
       <section className="collapses-container">
-        <CollapsePanel title='Description' data={item.description} />
-        <CollapsePanel title='Equipements' data={item.equipments} />
+        <CollapsePanel title='Description'>
+          <p>{item.description}</p>
+        </CollapsePanel>
+        <CollapsePanel title='Equipements'>
+          <ul>
+            {item.equipments.map((equipment) => (
+              <li key={`${equipment}`}>{equipment}</li>)
+            )} 
+          </ul>
+        </CollapsePanel>
       </section>
     </div>
   )

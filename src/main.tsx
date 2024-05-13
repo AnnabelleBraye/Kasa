@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/rental/:id' element={<Rental />}></Route>
         <Route path='*' element={<Error />}></Route>
       </Routes>
+      <Footer />
     </Router>
-    <Footer />
   </React.StrictMode>,
 )
